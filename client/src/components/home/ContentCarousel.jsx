@@ -18,9 +18,9 @@ const ContentCarousel = () => {
 
   const handleGetImage = async () => {
     axios
-      .get("https://picsum.photos/v2/list?page=1&limit=15")
+      .get("http://localhost:5000/api/promotion")
       .then((res) => {
-        // console.log(res);
+        console.log(res.data);
         setData(res.data);
       })
       .catch((err) => {
@@ -41,7 +41,7 @@ const ContentCarousel = () => {
       >
         {data?.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={item.download_url} alt="" />
+            <img className="w-full" src={item} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -60,7 +60,7 @@ const ContentCarousel = () => {
       >
         {data?.map((item, index) => (
           <SwiperSlide key={index}>
-            <img className="rounded-sm h-20px" src={item.download_url} />
+            <img className="rounded-sm h-20px" src={item} />
           </SwiperSlide>
         ))}
       </Swiper>

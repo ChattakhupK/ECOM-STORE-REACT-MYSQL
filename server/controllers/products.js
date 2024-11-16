@@ -278,3 +278,20 @@ exports.removeImage = async (req, res) => {
     res.status(500).json({ message: "server error" });
   }
 };
+
+exports.bannerData = (req, res) => {
+  try {
+    const banner = [
+      "https://img2.pic.in.th/pic/Computer-Cover---PosterMyWall.jpg",
+      "https://img5.pic.in.th/file/secure-sv1/Gaming-PC-Cover---PosterMyWall.jpg",
+      "https://img5.pic.in.th/file/secure-sv1/Computer-Sale-Cover-Template---PosterMyWall.jpg",
+      "https://img2.pic.in.th/pic/Computer-Parts-Banner---PosterMyWall.jpg",
+      "https://img5.pic.in.th/file/secure-sv1/gaming-computer-banner-sale-design-template-4eee9f783ef62e0f7122e9ae7828bec1_screen.jpg",
+    ];
+
+    res.send(banner)
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: " server error " });
+  }
+};
