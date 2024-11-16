@@ -60,7 +60,7 @@ const Login = () => {
   };
 
   return (
-    <div className="w-96 mx-auto space-y-4 mt-6 border px-6 py-8 ">
+    <div className="w-96 mx-auto space-y-4 mt-6 border px-6 py-8 shadow-md">
       <h1 className="text-center text-2xl font-bold">LOGIN</h1>
       <form onSubmit={handleSubmit}>
         <div className="space-y-2 mb-4">
