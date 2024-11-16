@@ -22,7 +22,7 @@ const ProductCard = ({ item }) => {
             className="w-full hover:scale-105 hover:duration-200"
           />
         ) : (
-          <div className="w-full h-[240px] bg-gray-100 hover:scale-105 hover:duration-200 text-center items-center flex justify-center shadow-sm">
+          <div className="w-full sm:h-[155.75px] md:h-[209px] h-[89px] lg:h-[240px] bg-gray-100 hover:scale-105 hover:duration-200 text-center items-center flex justify-center shadow-sm">
             No Image
           </div>
         )}
@@ -37,10 +37,10 @@ const ProductCard = ({ item }) => {
         <span className=" font-semibold">฿{numberFormat(item.price)}</span>
         <button
           onClick={() => actionAddtoCart(item)}
-          className="bg-blue-500 flex gap-2 justify-center items-center rounded-md p-2 hover:bg-blue-600 shadow-md"
+          className=" bg-blue-500 flex gap-2 justify-center items-center rounded-md p-2 hover:bg-blue-600 shadow-md"
         >
           <ShoppingCart className="w-5" />
-          Add to cart
+          <span className="hidden md:inline">Add to cart</span>
         </button>
       </div>
     </motion.div>

@@ -41,7 +41,7 @@ const ContentCarousel = () => {
       >
         {data?.map((item, index) => (
           <SwiperSlide key={index}>
-            <img className="w-full" src={item} alt="" />
+            <img className="w-full h-full" src={item} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>
